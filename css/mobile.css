@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        flex-direction: column;
+        order:1;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+    }
+    nav{
+        flex-wrap:wrap;
+    }
+    .hero-image img{
+        max-width:300px;
+    }
+
+    aside{
+        order:2;
+        border-right:none;
+        min-height:auto;
+    }
+
+    .logo span{
+        font-size:14px;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+}

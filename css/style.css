@@ -213,3 +213,12 @@ footer{
 .boton:hover{
     background:#0055cc;
 }
+
+.tarjeta{
+    background:white;
+    padding:30px;
+    margin:30px auto;
+    max-width:800px;
+    border-radius:12px;
+    box-shadow:0px 4px 12px rgba(0, 0, 0, .1);
+}

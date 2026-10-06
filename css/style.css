@@ -89,20 +89,17 @@ aside li{
     cursor:pointer;
 }
 
-section{
-
+.hero{
     flex:1;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
+    padding: 60px;
+    gap: 70px;
+}
 
+section{
     padding:60px;
-
-    gap:70px;
-
 }
 
 .hero-text{
@@ -157,7 +154,7 @@ footer{
     padding:30px;
     background:#103c73;
     color:white;
-    margin-top:50px;
+    margin-top:auto;
 
     display:flex;
     justify-content:space-around;
@@ -166,4 +163,53 @@ footer{
 .Nosotros{
     padding: 80px;
     text-align:center;
+}
+
+.Servicios{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    padding: 60px;
+    min-height:auto;
+}
+
+.Menu-servicios{
+    display:flex;
+    justify-content:center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.hero{
+    min-height:80vh;
+}
+
+.Menu-servicios a{
+    text-decoration:none;
+    background:#103c73;
+    color:white;
+    padding:12px 20px;
+    border: radius 8px;
+    transition:.3;
+}
+
+.Menu-servicios a:hover{
+    background:#0055cc;
+}
+
+.boton{
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:15px 35px;
+    font-size:18px;
+    transition:.3s;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.boton:hover{
+    background:#0055cc;
 }

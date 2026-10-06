@@ -5,6 +5,10 @@
         gap: 15px;
     }
 
+      nav{
+        flex-wrap:wrap;
+    }
+
     main {
         flex-direction: column;
     }
@@ -15,10 +19,7 @@
     }
 
     .hero-text h1 {
-        font-size: 20px;
-    }
-    nav{
-        flex-wrap:wrap;
+        font-size: 28px;
     }
     .hero-image img{
         max-width:300px;

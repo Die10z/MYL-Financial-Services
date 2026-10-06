@@ -162,3 +162,8 @@ footer{
     display:flex;
     justify-content:space-around;
 }
+
+.Nosotros{
+    padding: 80px;
+    text-align:center;
+}

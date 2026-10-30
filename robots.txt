@@ -1,0 +1,6 @@
+# Temporal: el sitio todavía muestra contenido de relleno.
+# Quitar este archivo (o este bloque) cuando el contenido real esté publicado
+# y también las etiquetas <meta name="robots" content="noindex, nofollow">.
+
+User-agent: *
+Disallow: /

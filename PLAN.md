@@ -70,9 +70,9 @@ Pendiente de contenido (bloqueado por la empresa):
 | 9 | Header distinto en index vs. el resto | ✅ corregido |
 | 10 | `<h2>M&L</h2>` usado como adorno; Nosotros sin `<h1>` | ✅ corregido |
 | 11 | CSS muerto: `.logo-grande`, `aside` | ✅ corregido |
-| 12 | Hero que no colapsa en móvil | ⬜ pendiente (Paso 2) |
-| 13 | Formulario sin `<form>` ni labels | ⬜ pendiente (Pasos 3-4) |
-| 14 | Modal sin `Esc`, sin `role="dialog"`, "X" no accesible por teclado | ⬜ pendiente (Paso 3) |
+| 12 | Hero que no colapsa en móvil | ✅ corregido |
+| 13 | Formulario sin `<form>` ni labels | ⬜ parcial: labels ✅, falta `<form>` + servicio (Paso 4) |
+| 14 | Modal sin `Esc`, sin `role="dialog"`, "X" no accesible por teclado | ✅ corregido |
 | 15 | `logo-empresa.jpeg` 1254×1254 (102 KB) mostrado a 90×90 | ⬜ pendiente (Paso 7) |
 
 ---
@@ -124,12 +124,19 @@ eliminado.
 - Eliminadas las reglas muertas `section { flex-direction; order }` y `aside`.
 - Verificado a 375 × 667 con capturas.
 
-### ⬜ Paso 3 — Accesibilidad
-- `alt` en todas las imágenes.
-- `<label for>` + `name` + `required` en el formulario.
-- Modal: `role="dialog"`, `aria-modal`, cerrar con `Esc`, foco al abrir,
-  y `<button>` en lugar del `<span>X</span>`.
+### ✅ Paso 3 — Accesibilidad
+- `alt` en todas las imágenes (3 que faltaban).
+- Formulario: `<label for>` + `id` + `name` + `autocomplete` + `required`.
+  Se corrigió además el layout: los campos estaban en una fila horizontal
+  (los `input` son inline) y sin estilos; ahora es una columna de 520px.
+- Modal: `role="dialog"`, `aria-modal`, `aria-label`, cierre con `Esc`,
+  foco al abrir, foco de vuelta al logo al cerrar, y `<button>` en lugar
+  del `<span>X</span>`. El logo es `role="button" tabindex="0"` y responde
+  a Enter y Espacio.
 - `aria-current="page"` en el enlace activo del nav.
+- `:focus-visible` con anillo azul de la paleta en todo el sitio.
+- Los `<h4>` del pie pasaron a `<h2>` (jerarquía de encabezados) con el
+  mismo tamaño visual.
 
 ### ⬜ Paso 4 — Contacto funcional
 GitHub Pages es estático: hace falta un servicio. Opciones:

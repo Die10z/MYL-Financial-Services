@@ -12,20 +12,20 @@
 <body>
     <header>
         <div class="logo">
-            <img id="logo-principal" src="img/logo-empresa.jpeg" alt="M&L Consultores Financieros y Contables">
+            <img id="logo-principal" src="img/logo-empresa.jpeg" alt="M&L Consultores Financieros y Contables" role="button" tabindex="0" aria-haspopup="dialog">
             <span class="logo-nombre">M&L</span>
             <span class="logo-lema">Consultores Financieros y Contables</span>
         </div>
 
-        <div id="visor-logo" class="visor-logo">
-            <span id="cerrar-logo">X</span>
+        <div id="visor-logo" class="visor-logo" role="dialog" aria-modal="true" aria-label="Logo ampliado">
+            <button type="button" id="cerrar-logo" aria-label="Cerrar">×</button>
             <img src="img/logo-empresa.jpeg" alt="Logo ampliado de M&L">
         </div>
 
         <nav>
             <a href="index.html">Inicio</a>
             <a href="Servicios.html">Servicios</a>
-            <a href="Nosotros.html">Nosotros</a>
+            <a href="Nosotros.html" aria-current="page">Nosotros</a>
             <a href="Contacto.html">Contacto</a>
         </nav>
     </header>
@@ -86,23 +86,23 @@
         </div>
 
         <div>
-            <h4>
+            <h2>
                 Contacto:
-            </h4>
+            </h2>
             <p>Teléfono: 8888-8888 9999-9999</p>
             <p>Correo: contacto@gmail.com</p>
         </div>
 
         <div>
-            <h4>
+            <h2>
                 Redes:
-            </h4>
+            </h2>
             <p>Facebook: Lolita</p>
             <p>Instagram: Mery</p>
         </div>
 
         <div>
-            <h4>Copyright</h4>
+            <h2>Copyright</h2>
             © 2026 M&L
         </div>
     </footer>

@@ -12,13 +12,13 @@
 <body>
     <header>
         <div class="logo">
-            <img id="logo-principal" src="img/logo-empresa.jpeg" alt="M&L Consultores Financieros y Contables">
+            <img id="logo-principal" src="img/logo-empresa.jpeg" alt="M&L Consultores Financieros y Contables" role="button" tabindex="0" aria-haspopup="dialog">
             <span class="logo-nombre">M&L</span>
             <span class="logo-lema">Consultores Financieros y Contables</span>
         </div>
 
-        <div id="visor-logo" class="visor-logo">
-            <span id="cerrar-logo">X</span>
+        <div id="visor-logo" class="visor-logo" role="dialog" aria-modal="true" aria-label="Logo ampliado">
+            <button type="button" id="cerrar-logo" aria-label="Cerrar">×</button>
             <img src="img/logo-empresa.jpeg" alt="Logo ampliado de M&L">
         </div>
 
@@ -26,24 +26,26 @@
             <a href="index.html">Inicio</a>
             <a href="Servicios.html">Servicios</a>
             <a href="Nosotros.html">Nosotros</a>
-            <a href="Contacto.html">Contacto</a>
+            <a href="Contacto.html" aria-current="page">Contacto</a>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>
-                Contacto
-            </h1>
-            <input type="text">
+    <main class="pagina-contacto">
+        <section class="contacto">
+            <h1>Contacto</h1>
 
-            <input type="email">
+            <div class="formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
-            <textarea></textarea>
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
 
-            <button>
-                Enviar
-            </button>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="button">Enviar</button>
+            </div>
         </section>
     </main>
 
@@ -56,23 +58,23 @@
         </div>
 
         <div>
-            <h4>
+            <h2>
                 Contacto:
-            </h4>
+            </h2>
             <p>Teléfono: 8888-8888 9999-9999</p>
             <p>Correo: contacto@gmail.com</p>
         </div>
 
         <div>
-            <h4>
+            <h2>
                 Redes:
-            </h4>
+            </h2>
             <p>Facebook: Lolita</p>
             <p>Instagram: Mery</p>
         </div>
 
         <div>
-            <h4>Copyright</h4>
+            <h2>Copyright</h2>
             © 2026 M&L
         </div>
     </footer>

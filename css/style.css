@@ -185,8 +185,22 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 60px;
+    padding: 60px 60px 0;
     min-height: auto;
+}
+
+/* Las secciones de servicios viven dentro de <main> por semantica,
+   pero conservan el aspecto que tenian al ser hermanas de <main>:
+   ancho completo, texto a la izquierda y el mismo ritmo vertical
+   (120px despues del menu, 120px entre secciones, 60px hacia el pie). */
+.Servicios>section {
+    width: 100%;
+    text-align: left;
+    padding: 60px 0;
+}
+
+.Servicios>section:first-of-type {
+    padding-top: 120px;
 }
 
 .Menu-servicios {

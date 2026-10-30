@@ -116,13 +116,13 @@ Header único en las 4 páginas (logo + nombre + lema + visor), `script.js` con
 guardas, `<h1>` en Nosotros, `<h2>` de marca convertido a `span`, CSS muerto
 eliminado.
 
-### ⬜ Paso 2 — Responsive
-- `.hero` a `flex-direction: column` en `max-width: 768px`.
-- Reducir `padding` de 60px a ~24px en móvil.
-- `nav { gap: 50px }` → menor en móvil.
-- Eliminar la regla muerta `section { flex-direction: column; order: 1 }`
-  (las `section` no son flex).
-- Verificar a 375px, 414px y 768px.
+### ✅ Paso 2 — Responsive
+- `.hero` a una sola columna (antes las dos columnas se aplastaban).
+- Header: logo, "M&L" y lema apilados y centrados a 375px.
+- Footer: grilla de dos columnas (Contacto | Redes) con la marca arriba y
+  el copyright abajo; altura reducida a la mitad.
+- Eliminadas las reglas muertas `section { flex-direction; order }` y `aside`.
+- Verificado a 375 × 667 con capturas.
 
 ### ⬜ Paso 3 — Accesibilidad
 - `alt` en todas las imágenes.
@@ -148,7 +148,18 @@ GitHub Pages desde `main`, favicon, `meta description`, Open Graph,
 Reescalar el logo a ~180px y convertirlo a WebP, `loading="lazy"` en imágenes
 no críticas.
 
-### ⬜ Paso 8 — Largo plazo (proyecto aparte)
+### ⬜ Paso 8 — Pulido visual de la interfaz
+
+Pedido explícito: estética "smooth and fresh", seria (no infantil) e
+interactiva, **sin tocar la paleta**.
+
+- Transiciones y microinteracciones: hover de nav y botones, entrada suave
+  de tarjetas y secciones.
+- Profundidad: sombras en capas, bordes y radios más cuidados.
+- Jerarquía tipográfica y ritmo vertical más consistentes.
+- Estados de foco visibles en nav, botones y formulario.
+
+### ⬜ Paso 9 — Largo plazo (proyecto aparte)
 Portafolio personal, JavaScript avanzado, React (recrear el sitio), Node.js.
 
 ---

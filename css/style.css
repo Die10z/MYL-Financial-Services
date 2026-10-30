@@ -205,8 +205,8 @@ footer {
     background: #103c73;
     color: white;
     padding: 12px 20px;
-    border: radius 8px;
-    transition: .3;
+    border-radius: 8px;
+    transition: .3s;
 }
 
 .Menu-servicios a:hover {

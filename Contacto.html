@@ -34,7 +34,7 @@
         <section class="contacto">
             <h1>Contacto</h1>
 
-            <div class="formulario">
+            <form class="formulario" action="https://formspree.io/f/REEMPLAZAR" method="POST">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
@@ -44,8 +44,18 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                <button type="button">Enviar</button>
-            </div>
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio de M&L">
+
+                <!-- Campo trampa: los humanos no lo ven, los bots si lo rellenan. -->
+                <div class="hp" aria-hidden="true">
+                    <label for="empresa">No completar</label>
+                    <input type="text" id="empresa" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit">Enviar</button>
+
+                <p class="form-estado" role="status" aria-live="polite"></p>
+            </form>
         </section>
     </main>
 

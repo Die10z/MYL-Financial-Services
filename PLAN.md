@@ -71,7 +71,7 @@ Pendiente de contenido (bloqueado por la empresa):
 | 10 | `<h2>M&L</h2>` usado como adorno; Nosotros sin `<h1>` | ✅ corregido |
 | 11 | CSS muerto: `.logo-grande`, `aside` | ✅ corregido |
 | 12 | Hero que no colapsa en móvil | ✅ corregido |
-| 13 | Formulario sin `<form>` ni labels | ⬜ parcial: labels ✅, falta `<form>` + servicio (Paso 4) |
+| 13 | Formulario sin `<form>` ni labels | ✅ corregido (falta el ID de Formspree) |
 | 14 | Modal sin `Esc`, sin `role="dialog"`, "X" no accesible por teclado | ✅ corregido |
 | 15 | `logo-empresa.jpeg` 1254×1254 (102 KB) mostrado a 90×90 | ⬜ pendiente (Paso 7) |
 
@@ -138,10 +138,22 @@ eliminado.
 - Los `<h4>` del pie pasaron a `<h2>` (jerarquía de encabezados) con el
   mismo tamaño visual.
 
-### ⬜ Paso 4 — Contacto funcional
-GitHub Pages es estático: hace falta un servicio. Opciones:
-`Formspree` (recomendado, plan gratis), `Netlify Forms`, `EmailJS`.
-Requiere decisión.
+### ✅ Paso 4 — Contacto funcional
+
+Decisión: **Formspree** (plan free: 50 envíos/mes, 1 formulario).
+
+Implementado:
+- `<form action="https://formspree.io/f/REEMPLAZAR" method="POST">` con
+  labels, `required` y `autocomplete`.
+- Campo trampa `_gotcha` oculto (anti-spam) y `_subject` para el asunto.
+- Envío por `fetch` con `Accept: application/json`: mensaje de éxito o de
+  error en la misma página, sin recargar (mejora progresiva: sin JS el
+  formulario igual hace el POST normal).
+- Estado accesible con `role="status"` y `aria-live="polite"`.
+
+**Pendiente:** reemplazar `REEMPLAZAR` por el ID real del formulario de
+Formspree. Mientras siga el placeholder, el envío se bloquea con un aviso
+en vez de fallar.
 
 ### ⬜ Paso 5 — Contenido real
 Textos de Servicios y Nosotros, teléfono/correo/redes oficiales, imágenes.

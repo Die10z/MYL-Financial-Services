@@ -332,3 +332,28 @@ footer h2 {
 .formulario button{
     align-self:flex-start;
 }
+
+/* Campo trampa invisible para humanos. */
+.formulario .hp{
+    position:absolute;
+    left:-9999px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.form-estado{
+    margin-top:12px;
+    font-size:14px;
+    min-height:20px;
+}
+
+.form-estado[data-estado="ok"]{
+    color:#103c73;
+    font-weight:700;
+}
+
+.form-estado[data-estado="error"]{
+    color:#1d1d1d;
+    font-weight:700;
+}

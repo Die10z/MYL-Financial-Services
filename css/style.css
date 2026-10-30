@@ -477,6 +477,24 @@ button:active,
     background: #103c73;
 }
 
+/* ---------- Bajadas de pagina ---------- */
+.Servicios .subtitulo {
+    max-width: 620px;
+    margin: 14px 0 0;
+    color: #555;
+}
+
+.contacto-intro {
+    max-width: 520px;
+    margin-top: 12px;
+    color: #555;
+}
+
+/* Lineas de texto mas cortas para leer comodo en pantallas anchas. */
+.Servicios>section p {
+    max-width: 760px;
+}
+
 /* ---------- Formulario ---------- */
 .formulario input:focus,
 .formulario textarea:focus {

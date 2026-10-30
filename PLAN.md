@@ -77,6 +77,29 @@ Pendiente de contenido (bloqueado por la empresa):
 
 ---
 
+## Decisiones registradas
+
+### Mantener HTML/CSS/JS en lugar de migrar a React (2026-10-30)
+
+Se evaluó migrar el sitio a React, a Node o a Astro. Decisión: **seguir con
+HTML/CSS/JS**.
+
+Motivos:
+
+- Son 4 páginas estáticas con un modal. No hay estado, rutas dinámicas ni datos.
+- React exigiría ~300 dependencias, un paso de build y ~150-200 KB de JS para
+  producir exactamente el mismo HTML.
+- GitHub Pages sirve HTML directo sin configuración; React necesita build + CI.
+- Node es un runtime de servidor: no reemplaza HTML y hoy no hace falta.
+
+Costo real conocido: el header y el footer están duplicados en 4 archivos. Se
+acepta por ahora; si el sitio crece, la salida barata es Astro (componentes con
+salida estática), no React.
+
+React se aprende como proyecto aparte (Paso 8), según la bitácora.
+
+---
+
 ## Plan por pasos (en este orden)
 
 El orden respeta una regla: primero lo que no depende de nadie, después lo que

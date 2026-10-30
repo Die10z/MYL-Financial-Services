@@ -169,13 +169,25 @@ Bloqueado por la empresa.
   formulario apuntando a `https://formspree.io/f/xzeearqo`.
 - Deploy automático: cada `git push` a `main` republica en ~1-3 minutos.
 
-### ⬜ Paso 7 — SEO y optimización
+### ✅ Paso 7 — SEO y optimización
 
-- Favicon, `meta description`, Open Graph y Twitter Card.
-- `sitemap.xml` y `robots.txt`.
-- Reescalar `logo-empresa.jpeg` (1254×1254, 102 KB) a ~180px y pasarlo a
-  WebP: hoy pesa 190× más píxeles de los que muestra.
-- `loading="lazy"` en imágenes no críticas.
+- **Imágenes** (peso del home: ~166 KB → 56 KB, -66%):
+  - `logo-empresa.webp` 180×180 → **4.8 KB** (antes 102 KB de 1254×1254).
+  - `logo-grande.webp` 600×600 → 29.4 KB, para el visor.
+  - `Inicio.webp` 738×414 q75 → 32.7 KB (antes 44.7 KB).
+  - `favicon.png` 64×64 y `apple-touch-icon.png` 180×180.
+  - `width`/`height` en las imágenes para evitar saltos de layout (CLS).
+- **SEO:** `meta description` única por página, Open Graph completo
+  (`og:type`, `og:site_name`, `og:locale`, `og:title`, `og:description`,
+  `og:url`, `og:image`), favicon y apple-touch-icon en las 4 páginas.
+- **`noindex` temporal:** `robots.txt` con `Disallow: /` +
+  `<meta name="robots" content="noindex, nofollow">` en las 4 páginas.
+  **Quitar ambos cuando el contenido real esté publicado.**
+- `mobile.css` acota el visor del logo a 320px (medía 600px fijos y se
+  salía de pantalla).
+
+Pendiente para cuando haya contenido real: `sitemap.xml` y quitar el
+`noindex`.
 
 ### ⬜ Paso 8 — Pulido visual de la interfaz
 

@@ -79,6 +79,24 @@ Pendiente de contenido (bloqueado por la empresa):
 
 ## Decisiones registradas
 
+### Logo del header como enlace al inicio (2026-10-30)
+
+Por convención de navegación (el logo siempre vuelve al inicio), el bloque
+del logo pasó de `<div>` a `<a href="index.html">`. El visor ampliado del
+logo quedó **sin disparador**: su marcado y su CSS siguen en el proyecto
+pero ya no se enganchan eventos. Pendiente decidir si se elimina o se
+reactiva desde otro control.
+
+### Teléfonos y correo como enlaces separados (2026-10-30)
+
+Los dos teléfonos estaban en un mismo texto y Safari los fusionaba en un
+único enlace (`tel:8888888899999999`). Ahora cada uno es su propio enlace
+`tel:` y el correo es `mailto:`. Además se agregó
+`<meta name="format-detection" content="telephone=no">` para que el
+navegador no vuelva a detectarlos por su cuenta.
+
+---
+
 ### Mantener HTML/CSS/JS en lugar de migrar a React (2026-10-30)
 
 Se evaluó migrar el sitio a React, a Node o a Astro. Decisión: **seguir con

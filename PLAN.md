@@ -189,16 +189,25 @@ Bloqueado por la empresa.
 Pendiente para cuando haya contenido real: `sitemap.xml` y quitar el
 `noindex`.
 
-### ⬜ Paso 8 — Pulido visual de la interfaz
+### ✅ Paso 8 — Pulido visual de la interfaz
 
-Pedido explícito: estética "smooth and fresh", seria (no infantil) e
-interactiva, **sin tocar la paleta**.
+Estética "smooth and fresh", seria e interactiva, **sin tocar la paleta**.
 
-- Transiciones y microinteracciones: hover de nav y botones, entrada suave
-  de tarjetas y secciones.
-- Profundidad: sombras en capas, bordes y radios más cuidados.
-- Jerarquía tipográfica y ritmo vertical más consistentes.
-- Estados de foco visibles en nav, botones y formulario.
+- **Tipografía Inter** (variable, self-hosted, 47 KB WOFF2, subconjunto
+  latin) con `preload`. Reemplaza a Arial. Escala con `line-height: 1.65`
+  y titulares con `letter-spacing` negativo.
+- **Navegación:** enlace activo con subrayado permanente vía
+  `aria-current="page"`.
+- **Profundidad:** sombras en capas en botones, tarjetas, header e imagen
+  del hero; borde suave en las tarjetas.
+- **Movimiento:** hover con elevación de 2px en botones y 3px en tarjetas,
+  sombra del header al scrollear, y aparición suave de bloques con
+  `IntersectionObserver`.
+- **Detalles:** fondo del hero con degradado del mismo azul al 5%,
+  subrayado de acento bajo los títulos de servicio, anillo de foco en los
+  campos del formulario.
+- Todo respeta `prefers-reduced-motion`, y sin JavaScript el contenido se
+  ve igual (las clases de animación se agregan desde el JS).
 
 ### ⬜ Paso 9 — Largo plazo (proyecto aparte)
 Portafolio personal, JavaScript avanzado, React (recrear el sitio), Node.js.

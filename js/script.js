@@ -94,3 +94,40 @@ if (formulario && estadoForm) {
         }
     });
 }
+
+/* ------------------------------------------------------------------ *
+ * Pulido visual: sombra del header al scrollear y aparicion suave de
+ * los bloques. Si el navegador no soporta IntersectionObserver, los
+ * elementos quedan visibles (nunca se ocultan desde el CSS).
+ * ------------------------------------------------------------------ */
+const encabezado = document.querySelector("header");
+
+if (encabezado) {
+    const ajustarHeader = () => {
+        encabezado.classList.toggle("header-solido", window.scrollY > 8);
+    };
+
+    ajustarHeader();
+    window.addEventListener("scroll", ajustarHeader, { passive: true });
+}
+
+const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!sinMovimiento && "IntersectionObserver" in window) {
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    document
+        .querySelectorAll(".hero-text, .hero-image, .tarjeta, .Menu-servicios, .formulario")
+        .forEach((el) => {
+            el.classList.add("revelar");
+            observador.observe(el);
+        });
+}
+

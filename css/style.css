@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url("../fonts/inter-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +22,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1d1d1d;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 header {
@@ -356,4 +372,142 @@ footer h2 {
 .form-estado[data-estado="error"]{
     color:#1d1d1d;
     font-weight:700;
+}
+
+/* ==================================================================
+   Pulido visual (Paso 8)
+   Tipografia, profundidad y movimiento. La paleta NO cambia.
+   ================================================================== */
+
+/* ---------- Tipografia ---------- */
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+h1 {
+    letter-spacing: -0.03em;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+nav a[aria-current="page"] {
+    color: #103c73;
+}
+
+nav a[aria-current="page"]::after {
+    width: 100%;
+    background: #103c73;
+}
+
+/* ---------- Header con profundidad ---------- */
+header {
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 1px 2px rgba(16, 60, 115, .04);
+    transition: box-shadow .25s ease;
+}
+
+header.header-solido {
+    box-shadow: 0 4px 6px rgba(16, 60, 115, .04), 0 12px 32px rgba(16, 60, 115, .10);
+}
+
+/* ---------- Botones ---------- */
+button,
+.boton,
+.Menu-servicios a {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px rgba(16, 60, 115, .18), 0 6px 16px rgba(16, 60, 115, .14);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+button:hover,
+.boton:hover,
+.Menu-servicios a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(16, 60, 115, .20), 0 10px 24px rgba(16, 60, 115, .18);
+}
+
+button:active,
+.boton:active,
+.Menu-servicios a:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(16, 60, 115, .18), 0 4px 10px rgba(16, 60, 115, .14);
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+    border: 1px solid rgba(16, 60, 115, .10);
+    box-shadow: 0 1px 2px rgba(16, 60, 115, .04), 0 8px 20px rgba(16, 60, 115, .06);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(16, 60, 115, .06), 0 16px 36px rgba(16, 60, 115, .12);
+}
+
+/* ---------- Imagen del hero ---------- */
+.hero-image img {
+    box-shadow: 0 8px 16px rgba(16, 60, 115, .10), 0 24px 60px rgba(16, 60, 115, .18);
+}
+
+/* ---------- Fondo suave del hero ---------- */
+/* Mismo azul de la paleta, aplicado con transparencia. */
+.hero {
+    background: linear-gradient(180deg, rgba(16, 60, 115, .05), rgba(16, 60, 115, 0) 70%);
+}
+
+/* ---------- Acento bajo los titulos de servicio ---------- */
+.Servicios>section h2::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin-top: 12px;
+    border-radius: 2px;
+    background: #103c73;
+}
+
+/* ---------- Formulario ---------- */
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #0055cc;
+    box-shadow: 0 0 0 3px rgba(0, 85, 204, .15);
+    outline: none;
+}
+
+/* ---------- Aparicion suave al scrollear ---------- */
+.revelar {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.revelar.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    button,
+    .boton,
+    .Menu-servicios a,
+    .tarjeta {
+        transition: none;
+    }
 }

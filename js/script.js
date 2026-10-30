@@ -85,7 +85,7 @@ if (!sinMovimiento && "IntersectionObserver" in window) {
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
     document
-        .querySelectorAll(".hero-text, .hero-image, .tarjeta, .Menu-servicios, .formulario")
+        .querySelectorAll(".hero-text, .hero-image, .tarjeta, .tarjeta-servicio, .Menu-servicios, .formulario, .cta")
         .forEach((el) => {
             el.classList.add("revelar");
             observador.observe(el);

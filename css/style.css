@@ -519,6 +519,99 @@ button:active,
     max-width: 760px;
 }
 
+/* ---------- Servicios destacados (home) ---------- */
+.servicios-destacados {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.servicios-destacados h2 {
+    font-size: 32px;
+}
+
+.servicios-destacados .subtitulo {
+    max-width: 620px;
+    margin: 12px auto 0;
+    color: #555;
+}
+
+.grilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1080px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.tarjeta-servicio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid rgba(16, 60, 115, .10);
+    border-radius: 14px;
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0 1px 2px rgba(16, 60, 115, .04), 0 8px 20px rgba(16, 60, 115, .06);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-4px);
+    border-color: rgba(16, 60, 115, .22);
+    box-shadow: 0 4px 8px rgba(16, 60, 115, .06), 0 18px 40px rgba(16, 60, 115, .14);
+}
+
+.tarjeta-servicio h3 {
+    font-size: 19px;
+    color: #103c73;
+}
+
+.tarjeta-servicio p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.tarjeta-servicio .mas {
+    margin-top: auto;
+    padding-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0055cc;
+}
+
+/* ---------- Banda de contacto ---------- */
+.cta {
+    margin: 0 60px 60px;
+    padding: 56px 40px;
+    border-radius: 18px;
+    background: #103c73;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 30px;
+}
+
+.cta p {
+    margin: 12px 0 28px;
+    color: rgba(255, 255, 255, .85);
+}
+
+.boton-claro {
+    background: #ffffff;
+    color: #103c73;
+}
+
+.boton-claro:hover {
+    background: #ffffff;
+    color: #003366;
+}
+
 /* ---------- Formulario ---------- */
 .formulario input:focus,
 .formulario textarea:focus {

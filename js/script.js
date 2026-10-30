@@ -1,8 +1,6 @@
 /* ------------------------------------------------------------------ *
- * El logo del header es ahora un enlace a index.html (volver al inicio),
- * por convencion de navegacion. El visor ampliado quedo sin disparador:
- * su marcado y su CSS siguen en el proyecto para no perder el trabajo,
- * pero no se enganchan eventos.
+ * El logo del header es un <a href="index.html"> (volver al inicio),
+ * por convencion de navegacion. No necesita JavaScript.
  * ------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------ *

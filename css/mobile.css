@@ -27,13 +27,6 @@
         padding: 6px 0;
     }
 
-    /* El visor del logo mide 600px fijos: en el telefono se sale de pantalla. */
-    .visor-logo img {
-        width: 85%;
-        max-width: 320px;
-        height: auto;
-    }
-
     /* ---------- Layout general ---------- */
     main {
         flex-direction: column;

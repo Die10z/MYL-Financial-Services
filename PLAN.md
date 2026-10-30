@@ -159,13 +159,23 @@ en vez de fallar.
 Textos de Servicios y Nosotros, teléfono/correo/redes oficiales, imágenes.
 Bloqueado por la empresa.
 
-### ⬜ Paso 6 — Publicación
-GitHub Pages desde `main`, favicon, `meta description`, Open Graph,
-`sitemap.xml` y `robots.txt`.
+### ✅ Paso 6 — Publicación
 
-### ⬜ Paso 7 — Optimización
-Reescalar el logo a ~180px y convertirlo a WebP, `loading="lazy"` en imágenes
-no críticas.
+- Repo **público** y GitHub Pages activo desde `main` / `(root)`.
+- `.nojekyll` para que Pages sirva los archivos sin procesarlos con Jekyll.
+- **Sitio live:** https://die10z.github.io/MYL-Financial-Services/
+- Verificado tras el deploy: las 4 páginas y los 9 recursos responden 200,
+  el header unificado, `aria-current`, `role="dialog"` y el `action` del
+  formulario apuntando a `https://formspree.io/f/xzeearqo`.
+- Deploy automático: cada `git push` a `main` republica en ~1-3 minutos.
+
+### ⬜ Paso 7 — SEO y optimización
+
+- Favicon, `meta description`, Open Graph y Twitter Card.
+- `sitemap.xml` y `robots.txt`.
+- Reescalar `logo-empresa.jpeg` (1254×1254, 102 KB) a ~180px y pasarlo a
+  WebP: hoy pesa 190× más píxeles de los que muestra.
+- `loading="lazy"` en imágenes no críticas.
 
 ### ⬜ Paso 8 — Pulido visual de la interfaz
 

@@ -156,6 +156,12 @@ section {
 .hero-image img {
     width: 100%;
     max-width: 600px;
+    /* height:auto + aspect-ratio + object-fit: la imagen nunca se deforma.
+       Si la foto oficial tiene otra proporcion, se recorta en vez de
+       estirarse. */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 18px;
     box-shadow: 0px 15px 35px rgba(0, 0, 0, .18);
     transition: .4s;
